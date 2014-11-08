@@ -45,3 +45,10 @@ end
 
 # Use Bootstrap
 gem 'less-rails-bootstrap'
+
+group :development do
+  # Use guard for live reload
+  gem 'guard'
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+end
