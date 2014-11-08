@@ -52,6 +52,12 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
 
+  # Use guard for auto test
+  gem 'guard-rspec'
+  gem 'spring-commands-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'terminal-notifier-guard' if `uname` =~ /Darwin/
+
   # Use Pry
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -61,4 +67,19 @@ group :development do
   gem 'hirb-unicode'
 
   gem 'rails_best_practices'
+end
+
+# Use RSpec and related gems for testing
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
 end
