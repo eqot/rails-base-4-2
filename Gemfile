@@ -55,4 +55,8 @@ group :development do
   # Use Pry
   gem 'pry-rails'
   gem 'pry-byebug'
+
+  # User Hirb
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
