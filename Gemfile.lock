@@ -37,6 +37,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (6.0.0.beta2)
+    awesome_print (1.2.0)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -46,6 +47,8 @@ GEM
       slop (~> 3.6)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    code_analyzer (0.4.5)
+      sexp_processor
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -54,6 +57,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    colored (1.2)
     columnize (0.8.9)
     commonjs (0.2.7)
     debug_inspector (0.0.2)
@@ -151,6 +155,16 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.1)
       loofah (~> 2.0)
+    rails_best_practices (1.15.4)
+      activesupport
+      awesome_print
+      code_analyzer (>= 0.4.3)
+      colored
+      erubis
+      i18n
+      json
+      require_all
+      ruby-progressbar
     railties (4.2.0.beta4)
       actionpack (= 4.2.0.beta4)
       activesupport (= 4.2.0.beta4)
@@ -163,6 +177,8 @@ GEM
     rdoc (4.1.2)
       json (~> 1.4)
     ref (1.0.5)
+    require_all (1.3.2)
+    ruby-progressbar (1.7.0)
     sass (3.4.7)
     sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
@@ -172,6 +188,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sexp_processor (4.4.4)
     slop (3.6.0)
     spring (1.1.3)
     sprockets (2.12.3)
@@ -223,6 +240,7 @@ DEPENDENCIES
   pry-rails
   rack-livereload
   rails (= 4.2.0.beta4)
+  rails_best_practices
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)
   spring

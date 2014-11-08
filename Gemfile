@@ -59,4 +59,6 @@ group :development do
   # User Hirb
   gem 'hirb'
   gem 'hirb-unicode'
+
+  gem 'rails_best_practices'
 end
