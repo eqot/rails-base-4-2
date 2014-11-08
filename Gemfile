@@ -43,6 +43,9 @@ group :development, :test do
   gem 'spring'
 end
 
+# Use Slim
+gem 'slim-rails'
+
 # Use Bootstrap
 gem 'less-rails-bootstrap'
 

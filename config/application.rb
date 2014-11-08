@@ -23,6 +23,9 @@ module RailsBase42
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    # Use Slim as a template engine
+    config.generators.template_engine = :slim
+
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
