@@ -1,0 +1,27 @@
+header.navbar.navbar-default role="navigation"
+  .container
+    .navbar-header
+      button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to "rails-base", root_path, class: "navbar-brand", id: "logo"
+
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+
+      ul.nav.navbar-nav
+        li
+          = link_to "About", about_path
+
+      ul.nav.navbar-nav.navbar-right
+        li
+          .dropdown
+            button.btn.btn-default.dropdown-toggle#dropdownMenuAction type="button" data-toggle="dropdown"
+              | Action
+              span.caret<
+            ul.dropdown-menu role="menu" aria-labelledby="dropdownMenuAction"
+              li role="presentation"
+                = link_to "Action"
+        li
+          button.btn.btn-success Sign in
