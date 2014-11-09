@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title RailsBase
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    = render partial: 'layouts/header'
+
+    .container
+      - flash.each do |key, value|
+        .alert.alert-dismissible class="#{bootstrap_class_for(key)}"
+          button.close type="button" data-dismiss="alert"
+            span aria-hidden="true"
+              | &times;
+            span.sr-only
+              | Close
+          = value
+
+    .container
+      = yield
+
+    = render partial: 'layouts/footer'
