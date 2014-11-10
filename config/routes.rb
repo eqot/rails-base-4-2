@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_scope :user do
+    get 'sign_up', to: 'devise/devise/registrations#new'
+    get 'sign_in', to: 'devise/sessions#new'
+    get 'sign_out', to: 'devise/sessions#destroy'
+  end
+
   root 'static_pages#top'
 
   get 'about' => 'static_pages#about'
