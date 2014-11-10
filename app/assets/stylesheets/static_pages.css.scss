@@ -10,9 +10,11 @@
   margin-right: 8px;
 }
 
-.navbar-nav button {
-  margin-top: 8px;
-  margin-left: 6px;
+.navbar-nav {
+  button, div > a {
+    margin-top: 8px;
+    margin-left: 6px;
+  }
 }
 
 footer hr {

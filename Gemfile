@@ -49,6 +49,9 @@ gem 'slim-rails'
 # Use Bootstrap
 gem 'less-rails-bootstrap'
 
+# Use Devise
+gem 'devise'
+
 group :development do
   # Use guard for live reload
   gem 'guard'

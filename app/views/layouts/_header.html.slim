@@ -24,4 +24,14 @@ header.navbar.navbar-default role="navigation"
               li role="presentation"
                 = link_to "Action"
         li
-          button.btn.btn-success Sign in
+          div
+            - if !user_signed_in?
+              = link_to "Sign in", sign_in_path, class: "btn btn-success"
+            - else
+              .dropdown
+                button.btn.btn-default.dropdown-toggle#dropdownMenuUser type="button" data-toggle="dropdown"
+                  = current_user.email
+                  span.caret<
+                ul.dropdown-menu role="menu" aria-labelledby="dropdownMenuUser"
+                  li role="presentation"
+                    = link_to "Sign out", sign_out_path
