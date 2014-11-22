@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20141110152005) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "name",                   limit: 255, default: "", null: false
     t.string   "encrypted_password",     limit: 255, default: "", null: false
     t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20141110152005) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["name"], name: "index_users_on_name", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
