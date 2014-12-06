@@ -1,0 +1,20 @@
+.container
+
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    h2.form-heading Sign in
+
+    .user-form
+      .input
+        = f.email_field :email, class: 'form-control', placeholder: 'Email address', autofocus: true
+        = f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: "off"
+
+      .flag
+        - if devise_mapping.rememberable?
+          = f.check_box :remember_me
+          = f.label :remember_me
+
+      .actions
+        = f.submit "Sign in", class: "btn btn-primary"
+
+      .others
+        = render "devise/shared/links"
