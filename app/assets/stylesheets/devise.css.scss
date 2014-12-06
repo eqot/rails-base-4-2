@@ -4,22 +4,28 @@
 }
 
 .user-form {
-  div {
+  div:not(.field_with_errors) {
     margin-bottom: 10px;
   }
 
-  input {
-    border-radius: 0;
-    margin-bottom: -1px;
+  .inputs {
+    input {
+      border-radius: 0;
+      margin-bottom: -1px;
+    }
 
-    &:first-child {
+    & > input:first-child, & > div:first-child > input {
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
     }
 
-    &:last-child {
+    & > input:last-child, & > div:last-child > input {
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
+    }
+
+    & > div.field_with_errors > input {
+      border-color: red;
     }
   }
 
