@@ -56,6 +56,11 @@ gem 'devise'
 # Use logger
 gem 'lograge'
 
+# Use Fluentd
+gem 'fluentd'
+gem 'fluent-plugin-parser'
+gem 'act-fluent-logger-rails'
+
 # Use profiler
 gem 'rack-mini-profiler', require: false
 
