@@ -53,6 +53,9 @@ gem 'less-rails-bootstrap'
 # Use Devise
 gem 'devise'
 
+# Use logger
+gem 'lograge'
+
 # Use profiler
 gem 'rack-mini-profiler', require: false
 

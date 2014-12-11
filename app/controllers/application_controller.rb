@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
     devise_parameter_sanitizer.for(:account_update) << :name
   end
+
+  def append_info_to_payload(payload)
+    super
+    payload[:remote_ip] = request.env['HTTP_X_FORWARDED_FOR'] || request.remote_ip
+  end
 end
