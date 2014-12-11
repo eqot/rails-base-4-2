@@ -52,6 +52,9 @@ gem 'less-rails-bootstrap'
 # Use Devise
 gem 'devise'
 
+# Use profiler
+gem 'rack-mini-profiler', require: false
+
 group :development do
   # Use guard for live reload
   gem 'guard'
