@@ -13,7 +13,11 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/fluent
 /tmp
+
+# Ignore asset files
+public/assets
 
 # Ignore other unneeded files.
 doc/

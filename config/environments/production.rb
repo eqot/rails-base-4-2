@@ -21,7 +21,7 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or NGINX will already do this).
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -44,13 +44,25 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Decrease the log volume.
-  # config.log_level = :info
+  config.log_level = :info
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
+  config.logger = ActFluentLoggerRails::Logger.new
+
+  # Use lograge
+  config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Json.new
+  config.lograge.custom_options = lambda do |event|
+    params = event.payload[:params].reject do |k|
+      ['controller', 'action'].include? k
+    end
+
+    {params: params, remote_ip: event.payload[:remote_ip]}
+  end
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store

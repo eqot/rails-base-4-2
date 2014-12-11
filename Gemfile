@@ -26,8 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
+# Use Puma as the app server
 # gem 'unicorn'
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -52,6 +53,17 @@ gem 'less-rails-bootstrap'
 # Use Devise
 gem 'devise'
 
+# Use logger
+gem 'lograge'
+
+# Use Fluentd
+gem 'fluentd'
+gem 'fluent-plugin-parser'
+gem 'act-fluent-logger-rails'
+
+# Use profiler
+gem 'rack-mini-profiler', require: false
+
 group :development do
   # Use guard for live reload
   gem 'guard'
@@ -73,6 +85,7 @@ group :development do
   gem 'hirb-unicode'
 
   gem 'rails_best_practices'
+  gem 'rubocop', require: false
 end
 
 # Use RSpec and related gems for testing
