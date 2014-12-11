@@ -77,6 +77,7 @@ group :development do
   gem 'hirb-unicode'
 
   gem 'rails_best_practices'
+  gem 'rubocop', require: false
 end
 
 # Use RSpec and related gems for testing

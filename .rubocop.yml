@@ -1,0 +1,25 @@
+AllCops:
+  RunRailsCops: true
+  # Include:
+  #   - '**/Rakefile'
+  #   - '**/config.ru'
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+Metrics/LineLength:
+  Max: 99
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
