@@ -1,5 +1,5 @@
 default: &default
-  fluent_host:   <%= ENV['FLUENTD_URL'] %>
+  fluent_host:   <%= ENV['FLUENTD_HOST'] %>
   fluent_port:   24224
   tag:           'railsbase'
   messages_type: 'string'
