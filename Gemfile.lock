@@ -188,7 +188,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
-    puma (2.11.0)
+    puma (2.11.1)
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rack-livereload (0.3.15)
